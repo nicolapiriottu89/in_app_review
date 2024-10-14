@@ -1,0 +1,34 @@
+name: in_app_review
+description: Flutter plugin for showing the In-App Review/System Rating pop up on Android, iOS and MacOS. It makes it easy for users to rate your app.
+version: 2.0.9
+
+environment:
+  sdk: '>=3.3.3 <4.0.0'
+  flutter: ">=3.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  in_app_review_platform_interface:
+    path: ./in_app_review_platform_interface
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  mockito: ^5.0.0
+  plugin_platform_interface: ^2.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        default_package: in_app_review_platform_interface
+        pluginClass: InAppReviewPlugin
+      ios:
+        default_package: in_app_review_platform_interface
+        pluginClass: InAppReviewPlugin
+
+screenshots:
+  - description: A screenshot of the iOS rating pop-up.
+    path: screenshots/ios.png
